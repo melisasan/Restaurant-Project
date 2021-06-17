@@ -1,0 +1,20 @@
+﻿@using Sera.Entity
+@model IEnumerable<Urun>
+     <h3>Popüler Ürünler</h3>
+<ul class="nav nav-list promowrapper">
+    @foreach (var item in Model)
+    {
+        <li>
+            <div class="thumbnail">
+                
+                <img src="~/Content/Images/@item.Resim" alt="bootstrap ecommerce templates">
+                <div class="caption">
+                    <h4><a class="defaultBtn" href="/Home/UrunDetay/@item.Id">Görüntüle</a> <span class="pull-right">@item.Fiyat ₺</span></h4>
+                </div>
+            </div>
+        </li>
+        <li style="border:0"> &nbsp;</li>
+    }
+
+
+</ul>

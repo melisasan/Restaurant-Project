@@ -1,0 +1,51 @@
+﻿@using Sera.Entity
+@model IEnumerable<Urun>
+
+@{
+    ViewBag.Title = "Search";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="row">
+    <div id="sidebar" class="span3">
+        <div class="well well-small">
+            <ul class="nav nav-list">
+                @Html.Action("_KategoriList", "Kategori")
+                @Html.Action("Summary", "Cart")
+            </ul>
+        </div>
+
+        @Html.Action("_OneCikanList", "Home")
+
+    </div>
+    <div class="span9">
+        <!--
+       Ürünler
+        -->
+
+        <h3>Ürünlerimiz</h3>
+
+        <ul class="thumbnails">
+            @foreach (var item in Model)
+            {
+                <li class="span3">
+                    <div class="thumbnail">
+
+                        <a href="/Home/UrunDetay/@item.Id"><img src="~/Content/Images/@item.Resim" style="max-width:207px;max-height:206px;min-width:207px;min-height:267px;" alt=""></a>
+                        <div class="caption cntr">
+                            <p>@item.Ad</p>
+                            <p><strong>@item.Fiyat ₺</strong></p>
+                            <h4><a class="shopBtn" href="/Home/UrunDetay/@item.Id" title="add to cart"> Görüntüle </a></h4>
+
+                            <br class="clr">
+                        </div>
+                    </div>
+                </li>
+            }
+
+
+        </ul>
+
+    </div>
+</div>
+

@@ -1,0 +1,85 @@
+﻿@model Sera.Entity.Urun
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<section class="content">
+
+    <h3>Ürünü silmek istediğinizden emin misiniz?</h3>
+    <div>
+        <hr />
+        <dl class="dl-horizontal">
+
+
+            <dt>
+                Adı
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Ad)
+            </dd>
+
+            <dt>
+                Açıklama
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Aciklama)
+            </dd>
+
+            <dt>
+                Resim
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Resim)
+                <img src="~/Content/Images/@Model.Resim" width="50" height="40" />
+            </dd>
+
+            <dt>
+                Fiyat
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Fiyat)
+            </dd>
+
+            <dt>
+                Anasayfa
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.AnasayfadaMi)
+            </dd>
+
+            <dt>
+                Popüler
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.OneCikan)
+            </dd>
+
+            <dt>
+                Satışta
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.SatistaMi)
+            </dd>
+
+        </dl>
+
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+
+            <div class="form-actions no-color">
+                <input type="submit" value="Sil" class="btn btn-danger" /> |
+                @Html.ActionLink("Ürün Listesi", "Index", null, new { @class = "btn btn-warning" })
+            </div>
+        }
+    </div>
+</section>

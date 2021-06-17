@@ -1,0 +1,54 @@
+﻿@model IEnumerable<Sera.Entity.Kategori>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<section class="content">
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="box">
+                <div class="box-header">
+                    <h3 class="box-title">Kategori Listesi</h3>
+                </div>
+            <br />
+            <a class="btn btn-primary btn-block" href="@Url.Action("Create")">Yeni Kayıt</a>
+            </br>
+                <div class="box-body">
+                    <table id="example1" class="table table-bordered table-striped">
+                        <thead>
+                            <tr>
+                                <th>Kategori Adı</th>
+                                <th></th>
+                               
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                            @foreach (var item in Model)
+                            {
+                                <tr>
+                                    <td>@item.Ad</td>
+                                    
+                                    <td><a class="btn btn-primary"< href="@Url.Action("Edit",new { id = item.Id })"><i class="fa fa-fw fa-edit"></i>Düzenle</td>
+                                    <td><a class="btn btn-danger"< href="@Url.Action("Delete",new { id = item.Id })"><i class="fa fa-fw fa-trash-o"></i>Sil</td>
+                                </tr>
+
+                            }
+                            
+                            
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <th>Kategori Adı</th>
+                                <th></th>
+
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

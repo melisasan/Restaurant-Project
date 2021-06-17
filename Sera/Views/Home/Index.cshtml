@@ -1,0 +1,174 @@
+﻿@using Sera.Entity
+@model IEnumerable<Urun>
+<div class="row">
+    <div id="sidebar" class="span3">
+        <div class="well well-small">
+            <ul class="nav nav-list">
+                @Html.Action("_KategoriList", "Kategori")
+                @Html.Action("Summary", "Cart")
+            </ul>
+        </div>
+
+
+
+        @Html.Action("_OneCikanList", "Home")
+
+    </div>
+    <div class="span9">
+        <div class="well np">
+            <div id="myCarousel" class="carousel slide homCar">
+                <div class="carousel-inner">
+                    <div class="item">
+                        <img style="width:100%; max-width:698px; max-height:327px; min-height:327px; min-width:698px" src="~/Content/Images/serarestoran.png" alt="bootstrap ecommerce templates">
+                        <div class="carousel-caption">
+                            <h4>Vazgeçilmez Lezzet</h4>
+                            <p><span>Sevdiğiniz lezzet bir tık kadar uzağınızda</span></p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img style="width:100%; max-width:698px; max-height:327px; min-height:327px; min-width:698px" src="~/Content/Images/hamburger.jpg" alt="bootstrap ecommerce templates">
+                        <div class="carousel-caption">
+                            <h4>En Sevdiğiniz Yemekler</h4>
+                            <p><span>Müşterilerinde tam puan alan Sera Restoran her daim hizmetinize hazır</span></p>
+                        </div>
+                    </div>
+                    <div class="item active">
+                        <img style="width:100%; max-width:698px; max-height:327px; min-height:327px; min-width:698px" src="~/Content/Images/pizza.jpg" alt="bootstrap ecommerce templates">
+                        <div class="carousel-caption">
+                            <h4>7/24 Açık!</h4>
+                            <p><span>Canınız ne zaman çekerse çeksin biz hep açığız.</span></p>
+                        </div>
+                    </div>
+                </div>
+                <a class="left carousel-control" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+                <a class="right carousel-control" href="#myCarousel" data-slide="next">&rsaquo;</a>
+            </div>
+        </div>
+
+
+        <!--
+        Kolon
+        -->
+        <div class="row-fluid">
+            <hr class="vertical-space3">
+            <h2>LEZZET İSTEDİĞİNİZ YERDE!</h2>
+            <h4>
+                Adana genelinde günde 500 adetten fazla paket servis yapan Sera Restoran,
+                aynı zamanda uzmanlar tarafından Adana ilinde 2019 yılının kalite ve hizmet ödülüne layık görülmüştür .
+            </h4>
+            <hr class="vertical-space2">
+            <div class="span2">
+                <img src="~/Content/Images/hizliservis.jpg">
+            </div>
+            <div class="span6">
+                <h3>Hızlı Paket Servis</h3>
+                <p>Nerede olursanız olun, hızlı ve güvenilir paket servisimiz sayesinde siparişiniz sıcak bir şekilde elinizde olur.</p>
+            </div>
+        </div>
+        <hr class="soften">
+        <div class="row-fluid">
+            <hr class="vertical-space1">
+            <div class="span2">
+                <img src="~/Content/Images/daimaaynitat.jpg">
+            </div>
+            <div class="span6">
+                <h3>Daima Aynı Tat</h3>
+                <p>Kurulduğumuz yıldan itibaren değişmeyen lezzetimizle damaklarda aynı tadı bırakmaya devam ediyoruz.</p>
+            </div>
+        </div>
+        <hr class="soften">
+        <div class="row-fluid">
+            <hr class="vertical-space1">
+            <div class="span2">
+                <img src="~/Content/Images/helalgida.jpg">
+            </div>
+            <div class="span6">
+                <h3>Helal Gıda</h3>
+                <p>Helal Gıda Belgesi ile sertifikalandırılan ürünlerimiz; sağlığa uygunluğunun yanında korunma, paketleme, depolama süreçlerine kadar İslami kurallara uyumlu olarak düzenlenmiştir.</p>
+            </div>
+        </div>
+        <hr class="soften">
+        <div class="row-fluid">
+            <hr class="vertical-space1">
+            <div class="span2">
+                <img src="~/Content/Images/yerlifastfood.jpg">
+            </div>
+            <div class="span6">
+                <h3>Yerli Fast Food</h3>
+                <p>Türk mutfağıyla harmanlanan ve en çok tercih edilen yerli fast-food markalarının başında geliyoruz.</p>
+            </div>
+        </div>
+        <hr class="vertical-space4">
+
+
+        <!--
+        Team
+        -->
+
+        <div class="row-fluid">
+            <hr class="vertical-space3">
+            <h1 class="mex-title">Ekibimiz</h1>
+
+            <h4><strong>Özenle seçilmiş kadromuz</strong></h4>
+        </div>
+        <hr class="vertical-space1">
+    </div>
+    <ul class="thumbnails">
+        <li class="span4">
+            <div class="thumbnail">
+
+                <div class="caption cntr">
+                    <img alt="" src="~/Content/Images/ahmentserik.jpg" style="max-width: 168px; max-height: 234px; min-width: 168px; min-height: 234px;" class=" img-circle">
+                    <p><strong>Ahmet Serik</strong></p>
+                    <p><small>Şef Aşçı</small></p>
+                    <p>Gençlik yıllarından beri bu sektörün içerisinde olan Ahmet Şef el lezzeti ile tüm müşterilerimizden tam puan alıyor. </p>
+                    <br class="clr">
+                </div>
+            </div>
+        </li>
+        <li class="span4">
+            <div class="thumbnail">
+
+                <div class="caption cntr">
+                    <img alt="" src="~/Content/Images/nazliilke.jpg" style="max-width: 168px; max-height: 234px; min-width: 168px; min-height: 234px;" class=" img-circle">
+                    <p><strong>Nazlı İlke</strong></p>
+                    <p><small>Baş Aşçı Yardımcısı</small></p>
+                    <p>15 yıl kendi yerini işlettikten sonra Sera Restorant ailesine katılan , yaptığı yemeklere sevgisini katan değerli şefimiz</p>
+                    <br class="clr">
+                </div>
+            </div>
+        </li>
+        <li class="span4">
+            <div class="thumbnail">
+                <div class="caption cntr">
+                    <img alt="" src="~/Content/Images/melisturgut.jpg" style="max-width: 168px; max-height: 234px; min-width: 168px; min-height: 234px; " class=" img-circle">
+                    <p><strong>Melis Turgut</strong></p>
+                    <p><small>Şef</small></p>
+                    <p>Gastronomide bir harika olan Melis Turgut hızı ve güler yüzüyle herkesi hayran bırakıyor. </p>
+                    <br class="clr">
+                </div>
+            </div>
+        </li>
+        <li class="span4">
+            <div class="thumbnail">
+                <div class="caption cntr">
+                    <img alt="" src="~/Content/Images/emreteber.jpg" style="max-width: 168px; max-height: 234px; min-width: 168px; min-height: 234px; " class=" img-circle">
+                    <p><strong>Emre Teber</strong></p>
+                    <p><small>Şef</small></p>
+                    <p>10 sene İngiltere'de birçok farklı restoranda şeflik yapan Emre Şef ekibimizin vazgeçilmez bir üyesi. </p>
+                    <br class="clr">
+                </div>
+            </div>
+        </li>
+
+
+    </ul>
+
+  
+    <!--
+    Featured Products
+    -->
+
+
+</div>
+ </div>

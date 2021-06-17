@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30413.136
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sera", "Sera\Sera.csproj", "{4E59ADAB-A1E4-4F11-94BA-3FDF0D61893A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4E59ADAB-A1E4-4F11-94BA-3FDF0D61893A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4E59ADAB-A1E4-4F11-94BA-3FDF0D61893A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4E59ADAB-A1E4-4F11-94BA-3FDF0D61893A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4E59ADAB-A1E4-4F11-94BA-3FDF0D61893A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A35334FE-BF84-41BF-9CB9-003A9D3B6194}
+	EndGlobalSection
+EndGlobal

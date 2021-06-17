@@ -1,0 +1,40 @@
+﻿@using Sera.Entity
+@model IEnumerable<Order>
+
+<li class="dropdown notifications-menu">
+    <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+        <i class="fa fa-bell-o"></i>
+        <span class="label label-warning">@Model.Count()</span>
+    </a>
+    <ul class="dropdown-menu">
+        <li class="header"><strong>Bildirimler</strong> Bekleyen Siparişler</li>
+        <li>
+          
+            <div class="slimScrollDiv" style="position: relative; overflow: hidden; width: auto; height: 200px;">
+                <ul class="menu" style="overflow: hidden; width: 100%; height: 200px;">
+                @foreach (var item in Model)
+                {<li>
+                        <a href="/Siparis/Details/@item.Id">
+                           <strong>@item.UserName</strong> Sipariş Bekliyor!!
+                        </a>
+                    </li>
+
+                }
+                    
+                
+                </ul><div class="slimScrollBar" style="background: rgb(0, 0, 0); width: 3px; position: absolute; top: 0px; opacity: 0.4; display: none; border-radius: 7px; z-index: 99; right: 1px; height: 195.122px;"></div><div class="slimScrollRail" style="width: 3px; height: 100%; position: absolute; top: 0px; display: none; border-radius: 7px; background: rgb(51, 51, 51); opacity: 0.2; z-index: 90; right: 1px;"></div>
+            </div>
+        </li>
+        <li class="footer">
+       @if(Model.Count()>0)
+       {
+           <p>Bildirimleriniz</p>
+       }
+       else
+       {
+           <span>Bildirim yok.</span>
+       }
+        </li>
+    </ul>
+</li>
+

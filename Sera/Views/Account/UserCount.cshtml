@@ -1,0 +1,17 @@
+﻿@using Sera.Identity
+@model IEnumerable<ApplicationUser>
+
+<div class="col-lg-3 col-xs-6">
+
+    <div class="small-box bg-aqua">
+        <div class="inner">
+            <h3>@Model.Count()</h3>
+           
+            <p>Kullanıcı Sayısı</p>
+        </div>
+        <div class="icon">
+            <i class="ion ion-bag"></i>
+        </div>
+        <a href="/Account/UserList" class="small-box-footer">Ayrıntılar <i class="fa fa-arrow-circle-right"></i></a>
+    </div>
+</div>

@@ -1,0 +1,44 @@
+﻿@using Sera.Models
+@model IEnumerable<KullaniciSiparis>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="row">
+    <div class="span12">
+
+        <div class="well well-small">
+           
+                <table class="table table-bordered table-condensed">
+                    <thead>
+                        <tr>
+
+                            <th>Sipariş Numarası</th>
+                            <th>Sipariş Tarihi </th>
+                            <th>Toplam Tutar(₺)</th>
+                            <th>Sipariş Durumu</th>
+                            
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                        <tr>
+                            <td>@item.OrderNumber</td>
+                            <td>@item.OrderDate</td>
+                            <td>@item.Total</td>
+                            <td>@item.SiparisDurumu</td>
+                            <td>@Html.ActionLink("Sipariş Detay", "Details", new { id = @item.Id }, new { @class = "btn btn-primary" })</td>
+                        </tr>
+                        }
+
+
+                    </tbody>
+                </table><br>
+            
+          
+        </div>
+    </div>
+</div>

@@ -1,0 +1,9 @@
+﻿@model Sera.Models.Cart
+<li>
+    <a class="totalInCart" href="/Cart/Index">
+        <strong>
+            Toplam Tutar: <span class="badge badge-warning pull-right"
+                                style="line-height:18px;">@Model.Total().ToString("c")</span>
+        </strong>
+    </a>
+</li>

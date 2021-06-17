@@ -1,0 +1,37 @@
+﻿ 
+@{
+    ViewBag.Title = "Iletisim";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="row">
+    <div id="sidebar" class="span3">
+        <div class="well well-small">
+            <ul class="nav nav-list">
+                @Html.Action("_KategoriList", "Kategori")
+                @Html.Action("Summary", "Cart")
+            </ul>
+        </div>
+
+
+        @Html.Action("_OneCikanList", "Home")
+
+    </div>
+    <div class="span9">
+        <ul class="breadcrumb">
+            <li><a href="/Home/Index">Anasayfa</a> <span class="divider">/</span></li>
+           
+            <li class="active">Iletisim</li>
+        </ul>
+        <div class="well well-small">
+
+            <h4>Adres:Kurtuluş, 01130 Seyhan </h4>
+            <h4>Telefon: +90322467349</h4>
+            <h4>Fax: +135 6084218</h4>
+            <h4>Email: info@serarestoranadana.com</h4>
+            <hr class="softn clr">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3186.544731583181!2d35.32100201515047!3d36.99679897990861!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x15288f423b45f1ab%3A0x6c9ed9c1adfbb0b1!2sAtaturk%20Park!5e0!3m2!1sen!2str!4v1599050689345!5m2!1sen!2str" 
+                    width="670" height="600" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+        </div>
+    </div>
+</div>

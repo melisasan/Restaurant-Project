@@ -1,0 +1,6 @@
+﻿@using (Html.BeginForm("Search", "Home", FormMethod.Get, new { @class = "navbar-search pull-left" }))
+{
+    <p>Lütfen arama yapmak istediğiniz ürünü yazınız.</p>
+    <input type="text" name="q" placeholder="Arama" class="search-query span2">
+    <button type="submit">Ara</button>
+}

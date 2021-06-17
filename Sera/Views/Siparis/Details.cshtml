@@ -1,0 +1,106 @@
+﻿@using Sera.Models
+@model OrderDetail
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<section class="content">
+    <div>
+        <h4>Sipariş Bilgileri</h4>
+        <hr />
+        <div class="row">
+            @if(TempData["mesaj"] != null)
+            {
+                <div class="alert alert-success alert-dismissable">
+                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+                    <h4>	<i class="icon fa fa-check"></i>BAŞARILI</h4>
+                    Bilgileriniz kaydedildi.
+                </div>
+            }
+        </div>
+        <dl class="dl-horizontal">
+            <dt>
+                Sipariş Durumu
+            </dt>
+
+            <dd>
+                @using (Html.BeginForm("UpdateSiparisDurumu","Siparis",FormMethod.Post))
+                {
+                    @Html.HiddenFor(i=>i.SiparisId)
+
+                @Html.EnumDropDownListFor(i => i.SiparisDurumu, "Sipariş Durumunu Seç", new { @class = "form-control" , @style = "width: 250px; display: inline-block" })
+                <button type="submit" class="btn btn-primary">Güncelle</button>
+                }
+            </dd>
+            <dt>
+                Kullanıcı Adı
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(Model => Model.UserName)
+            </dd>
+            <dt>
+                Sipariş Numarası
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(Model => Model.Siparisnumara)
+            </dd>
+            <dt>
+                Toplam Tutar
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(Model => Model.Total)
+            </dd>
+            <dt>
+                Sipariş Tarihi
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(Model => Model.SiparisTarihi)
+            </dd>
+            <dt>
+                Adres
+            </dt>
+
+            <dd>
+                Adres: @Html.DisplayFor(Model => Model.Adres)<br />
+                Şehir: @Html.DisplayFor(Model => Model.Sehir)<br />
+                İlçe: @Html.DisplayFor(Model => Model.Ilce)<br />
+                Mahalle: @Html.DisplayFor(Model => Model.Mahalle)<br />
+                Posta Kodu: @Html.DisplayFor(Model => Model.PostaKodu)<br />
+            </dd>
+
+        </dl>
+    </div>
+    <table class="table table-bordered table-condensed">
+        <thead>
+            <tr>
+
+                <th>Resim</th>
+                <th>Ürün Adı </th>
+                <th>Toplam Tutar(₺)</th>
+                <th>Adet</th>
+
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.OrderLines)
+            {
+            <tr>
+                <td><img src="/Content/Images/@item.Resim" height="75" width="75" /></td>
+                <td>@item.UrunAdi</td>
+                <td>@item.Fiyat</td>
+                <td>@item.Adet</td>
+                <td><a href="/Home/UrunDetay/@item.UrunId" class="btn btn-success" target="_blank">Ürün Detay</a></td>
+            </tr>
+                 }
+
+
+            </tbody>
+        </table>
+    </section>
+

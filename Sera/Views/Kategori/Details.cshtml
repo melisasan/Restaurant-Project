@@ -1,0 +1,28 @@
+﻿@model Sera.Entity.Kategori
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+<section class="content">
+    <div>
+        <h4>Kategori</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.Ad)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Ad)
+            </dd>
+
+        </dl>
+    </div>
+    <p>
+        @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+</section>
