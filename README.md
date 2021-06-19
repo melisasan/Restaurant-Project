@@ -1,4 +1,4 @@
-# Restaurant Project
+# Restaurant Project 🍽️
 
 ## ASP.NET MVC Entity Framework, Identity
 
@@ -19,7 +19,7 @@
 | Order's status | 
  ![image](./Sera/images/5.png) |
  Order details from Admin Panel |
-  ![image](./Sera/images/6.png) >|
+  ![image](./Sera/images/6.png) |
 
 
 
